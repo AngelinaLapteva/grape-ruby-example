@@ -1,21 +1,23 @@
 pipeline {
     agent { any { image 'ruby' } }
     stages {
-        stage('build') {
-            steps {
-                sh 'ruby --version'
-                echo 'Test print!'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-         stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+      stage('requirements') {
+          steps {
+            sh 'gem install bundler -v 2.1.4'
+          }
+      }
+      stage('build') {
+          steps {
+              sh 'ruby --version'
+              echo 'Installinng all gems'
+              sh 'bundle install'
+          }
+      }
+      stage('Test') {
+          steps {
+              echo 'Testing..'
+              sh 'rake'
+          }
+      }
     }
 }
