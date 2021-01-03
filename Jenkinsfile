@@ -11,6 +11,7 @@ pipeline {
               sh 'ruby --version'
               echo 'Installinng all gems'
               sh 'bundle install'
+              sh 'rails s'
           }
       }
       stage('Test') {
