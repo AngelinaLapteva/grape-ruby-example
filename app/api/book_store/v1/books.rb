@@ -8,6 +8,7 @@ module BookStore
         desc 'Return list of books'
         get do
           books = Book.all
+          breaking changes test! 
           present books
         end
       end
