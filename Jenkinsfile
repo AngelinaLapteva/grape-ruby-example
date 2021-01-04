@@ -1,5 +1,5 @@
 pipeline {
-    agent { any { image 'ruby' } }
+    agent { docker { image 'zen_bhabha' } }
     stages {
       stage('requirements') {
           steps {
