@@ -1,7 +1,4 @@
 pipeline {
-    agent {
-      docker { image 'angelina-ci' }
-    }
     stages {
       stage('requirements') {
           steps {
