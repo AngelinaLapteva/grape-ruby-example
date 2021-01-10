@@ -3,7 +3,6 @@ pipeline {
     stages {
       stage('requirements') {
           steps {
-            sh 'brew install ruby'
             sh 'gem install bundler -v 2.1.4'
           }
       }
