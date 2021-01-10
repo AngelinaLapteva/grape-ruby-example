@@ -1,4 +1,5 @@
 pipeline {
+  agent { any { image 'ruby' } }
     stages {
       stage('requirements') {
           steps {
