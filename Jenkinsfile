@@ -2,7 +2,8 @@ pipeline {
   agent { any { image 'ruby' } }
     stages {
       stage('requirements') {
-          steps {
+          steps {]
+            sh 'brew install ruby'
             sh 'gem install bundler -v 2.1.4'
           }
       }
