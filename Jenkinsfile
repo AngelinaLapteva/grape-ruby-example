@@ -1,5 +1,7 @@
 pipeline {
-    agent { docker { image 'zen_bhabha' } }
+    agent {
+      docker { image 'angelina-ci' }
+    }
     stages {
       stage('requirements') {
           steps {
