@@ -3,8 +3,6 @@ pipeline {
     stages {
       stage('requirements') {
           steps {
-            sh 'exec $SHELL'
-            sh 'git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build'
             sh 'rbenv install 2.6.3'
             sh 'gem install bundler -v 2.1.4'
           }
