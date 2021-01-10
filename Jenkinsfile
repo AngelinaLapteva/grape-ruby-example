@@ -3,7 +3,6 @@ pipeline {
     stages {
       stage('requirements') {
           steps {
-            sh 'git clone https://github.com/sstephenson/rbenv.git ~/.rbenv'
             sh 'exec $SHELL'
             sh 'git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build'
             sh 'rbenv install 2.6.3'
