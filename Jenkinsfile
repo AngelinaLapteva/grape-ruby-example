@@ -3,7 +3,6 @@ pipeline {
     stages {
       stage('requirements') {
           steps {
-            sh 'rbenv install 2.6.3'
             sh 'gem install bundler -v 2.1.4'
           }
       }
